@@ -26,7 +26,7 @@ const SLink = styled(Link)`
   padding-bottom: 0.5rem;
   width: 10rem;
 `;
-export default withRouter(({ location: { pathname } }) => (
+const headerJs = withRouter(({ location: { pathname } }) => (
   <header>
     <Header>Coin Explorer</Header>
     <List>
@@ -42,3 +42,5 @@ export default withRouter(({ location: { pathname } }) => (
     </List>
   </header>
 ));
+
+export default headerJs;
