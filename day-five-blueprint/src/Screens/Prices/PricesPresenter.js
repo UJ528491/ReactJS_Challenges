@@ -8,10 +8,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
 `;
-const Item = styled.span`
-  line-height: 1.3;
-`;
-
 const PricesPresenter = ({ prices, error, loading }) =>
   loading ? (
     <Loader></Loader>
@@ -22,9 +18,9 @@ const PricesPresenter = ({ prices, error, loading }) =>
         prices.map(
           (price, index) =>
             index < 100 && (
-              <Item key={price.id}>
+              <span key={price.id}>
                 {price.name} / {price.symbol}: ${price.quotes.USD.price}
-              </Item>
+              </span>
             )
         )}
     </Container>
@@ -33,7 +29,7 @@ const PricesPresenter = ({ prices, error, loading }) =>
 PricesPresenter.propTypes = {
   price: PropTypes.array,
   error: PropTypes.string,
-  loading: PropTypes.bool.isRequired,
+  loading: PropTypes.bool.isRequired
 };
 
 export default PricesPresenter;

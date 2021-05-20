@@ -55,7 +55,7 @@ const ExchangesPresenter = ({ exchanges, error, loading }) =>
 ExchangesPresenter.propTypes = {
   exchanges: PropTypes.array,
   error: PropTypes.string,
-  loading: PropTypes.bool.isRequired,
+  loading: PropTypes.bool.isRequired
 };
 
 export default ExchangesPresenter;

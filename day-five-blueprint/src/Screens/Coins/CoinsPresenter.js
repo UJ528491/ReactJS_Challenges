@@ -9,10 +9,6 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-const Item = styled.span`
-  line-height: 1.3;
-`;
-
 const CoinsPresenter = ({ coins, error, loading }) =>
   loading ? (
     <Loader></Loader>
@@ -23,9 +19,9 @@ const CoinsPresenter = ({ coins, error, loading }) =>
         coins.map(
           (coin, index) =>
             index < 100 && (
-              <Item key={coin.id}>
+              <span key={coin.id}>
                 #{coin.rank} {coin.name}/{coin.symbol}
-              </Item>
+              </span>
             )
         )}
     </Container>
@@ -34,7 +30,7 @@ const CoinsPresenter = ({ coins, error, loading }) =>
 CoinsPresenter.propTypes = {
   coins: PropTypes.array,
   error: PropTypes.string,
-  loading: PropTypes.bool.isRequired,
+  loading: PropTypes.bool.isRequired
 };
 
 export default CoinsPresenter;
