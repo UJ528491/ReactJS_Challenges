@@ -15,8 +15,12 @@ const globalStyles = createGlobalStyle`
         padding:30px;
     }
     h1 {
-      font-size:32px;
-      margin-bottom:30px;
+        font-size:32px;
+        margin-bottom:30px;
+    }
+    h2 {
+        font-size:20px;
+        font-weight: 500;
     }
 `;
 

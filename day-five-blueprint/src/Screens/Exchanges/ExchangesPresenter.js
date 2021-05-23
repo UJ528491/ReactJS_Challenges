@@ -21,7 +21,7 @@ const Link = styled.a`
   text-decoration: underline;
   margin-top: 10px;
 `;
-const ExchangesPresenter = ({ exchanges, error, loading }) =>
+const ExchangesPresenter = ({ exchanges, loading }) =>
   loading ? (
     <Loader></Loader>
   ) : (
@@ -55,7 +55,7 @@ const ExchangesPresenter = ({ exchanges, error, loading }) =>
 ExchangesPresenter.propTypes = {
   exchanges: PropTypes.array,
   error: PropTypes.string,
-  loading: PropTypes.bool.isRequired
+  loading: PropTypes.bool.isRequired,
 };
 
 export default ExchangesPresenter;
